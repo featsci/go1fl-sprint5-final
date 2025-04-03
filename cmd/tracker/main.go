@@ -6,6 +6,7 @@ import (
 	"github.com/featsci/go1fl-sprint5-final/internal/actioninfo"
 	"github.com/featsci/go1fl-sprint5-final/internal/daysteps"
 	"github.com/featsci/go1fl-sprint5-final/internal/personaldata"
+	"github.com/featsci/go1fl-sprint5-final/internal/trainings"
 	_ "github.com/featsci/go1fl-sprint5-final/internal/trainings"
 )
 
@@ -37,25 +38,25 @@ func main() {
 
 	actioninfo.Info(input, &daySteps)
 
-	// // // тренировки
-	// actions := []string{
-	// 	"3456,Ходьба,3h00m",
-	// 	"something is wrong",
-	// 	"678,Бег,0h5m",
-	// 	"1078,Бег,0h10m",
-	// 	",3456 Ходьба",
-	// 	"7892,Ходьба,3h10m",
-	// 	"15392,Бег,0h45m",
-	// }
+	// // тренировки
+	actions := []string{
+		"3456,Ходьба,3h00m",
+		"something is wrong",
+		"678,Бег,0h5m",
+		"1078,Бег,0h10m",
+		",3456 Ходьба",
+		"7892,Ходьба,3h10m",
+		"15392,Бег,0h45m",
+	}
 
-	// trains := trainings.Training{
-	// 	Personal: person,
-	// }
+	trains := trainings.Training{
+		Personal: person,
+	}
 
-	// fmt.Println("Журнал тренировок")
+	fmt.Println("Журнал тренировок")
 
-	// trains.Print()
+	trains.Print()
 
-	// actioninfo.Info(actions, &trains)
+	actioninfo.Info(actions, &trains)
 
 }

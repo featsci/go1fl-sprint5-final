@@ -48,19 +48,11 @@ func (ds *DaySteps) Parse(datastring string) (err error) {
 
 // создайте метод ActionInfo()
 func (ds DaySteps) ActionInfo() (string, error) {
-	// return "---", errors.New("Errrrr")
-	// countSteps, timeDuration, err := parsePackage(data)
-	// if err != nil {
-	// 	fmt.Println(err)
-	// 	return ""
-	// }
 
 	if ds.Duration <= 0 {
 		return "", errors.New("ds.Duration > 0")
 	}
 	calories := spentenergy.WalkingSpentCalories(ds.Steps, ds.Weight, ds.Height, ds.Duration)
-
-	//spentcalories.WalkingSpentCalories(countSteps, weight, height, timeDuration)
 
 	distanceSteps := spentenergy.Distance(ds.Steps)
 
